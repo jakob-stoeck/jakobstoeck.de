@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-<marquee>Nothing to see here</marquee>
+<div class="marquee"><p>Nothing to see here</p></div>
