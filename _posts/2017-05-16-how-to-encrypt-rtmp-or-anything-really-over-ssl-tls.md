@@ -1,20 +1,18 @@
 ---
 layout: post
-title:  "SSL Proxy"
+title:  "How to encrypt RTMP (or anything really) over SSL/TLS"
 date:   2017-05-16 15:36:15 +0200
 categories:
 ---
-# How to encrypt RTMP (or anything really) over SSL/TLS
-
 You want to communicate over a secure channel but your client application doesn’t support it? That’s a job for a transparent SSL proxy.
 
 This articles describes on how to use stunnel as a transparent proxy to encrypt communication. With a transparent proxy you do not need to change the client application.
 
-## Problem
+# Problem
 
 You want to send data securely between two computers over the internet but your sender application does not support SSL.
 
-## Example
+# Example
 
 You want to stream a video with [ffmpeg](https://ffmpeg.org) over RTMP to an RTMP server like [Wowza](https://www.wowza.com) or [nginx with an rtmp module](https://github.com/arut/nginx-rtmp-module). While ffmpeg supports RTMP it does not support the SSL-encrypted version RTMPS.
 
@@ -87,7 +85,7 @@ Now the sender acts as if it supports encryption and decryption. In the case of 
 $ ffmpeg -re -i "~/some.mp3" -acodec copy -f flv 'rtmp://www.example.org:443'
 ```
 
-## Solution
+# Solution
 
 The needed steps are:
 
@@ -95,7 +93,7 @@ The needed steps are:
 2. Route the sender traffic to the gateway without changing the receiver destination
 3. Configure stunnel to re-route the traffic to the receiver address after SSL-wrapping it
 
-### 1. Install stunnel on a server
+## 1. Install stunnel on a server
 
 Stunnel runs on all popular operating systems. To install it use your package manager, e.g. on macOS `brew install stunnel`. Stunnel accepts an incoming connection on a specified port, encrypts it and send it to another specified address.
 
@@ -131,7 +129,7 @@ LOG5[0]: Connection closed: 3 byte(s) sent to TLS, 0 byte(s) sent to socket
 
 You could stop here if the destination addresses were known beforehand and could be written in the config. In our example that’s not the case so proceed to step 2:
 
-### 2. Route the sender traffic to the gateway without changing the receiver destination
+## 2. Route the sender traffic to the gateway without changing the receiver destination
 
 Now that stunnel works, all the to-be-encrypted traffic needs to be directed to the stunnel port transparently, i.e. without the sender knowing that its traffic gets redirected. This can be done by setting the stunnel server IP as a gateway for the client.
 
@@ -141,7 +139,7 @@ On the gateway: The gateway needs to be configured to not drop those packets but
 
 Now the client computer should still be able to normally access the network but all its traffic is routed over the gateway before accessing the internet. Which enables us to do the last step:
 
-### 3. Configure stunnel to re-route the traffic to its original destination after SSL-wrapping it
+## 3. Configure stunnel to re-route the traffic to its original destination after SSL-wrapping it
 
 Instead of hard-coding a destination like we did in step 1, change the stunnel configuration to read like this:
 
@@ -165,7 +163,7 @@ $ iptables -I INPUT -i eth0 -p tcp --dport 443 -j ACCEPT
 $ iptables -t nat -I PREROUTING -p tcp --dport 443 -i eth0 -j DNAT --to-destination 127.0.0.1:443
 ```
 
-#### Make it secure
+### Make it secure
 
 Now you should be able to connect to any service with your sender over an encrypted connection as long as you use the configured port (443 in our example) in the destination address.
 
@@ -183,7 +181,7 @@ Ask the receiver maintainer which certificates are valid or have a look yourself
 $ openssl s_client -showcerts -connect www.example.org:443 </dev/null
 ```
 
-## Limitations
+# Limitations
 
 If you need [SNI](https://en.wikipedia.org/wiki/Server_Name_Indication) this approach might not work with all protocols without additional work. The reason is that for SNI you need the destination domain which is written inside the application protocol and must be read by stunnel. But stunnel does not understand all protocols (it normally doesn’t need to for just encrypting it). It does understand some protocols, though, like imap, http, proxy, smtp and others.
 
