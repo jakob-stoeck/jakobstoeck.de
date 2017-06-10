@@ -160,7 +160,7 @@ On the gateway: Route the incoming traffic which is directed to port 443 to the 
 
 ```shell
 $ iptables -I INPUT -i eth0 -p tcp --dport 443 -j ACCEPT
-$ iptables -t nat -I PREROUTING -p tcp --dport 443 -i eth0 -j DNAT --to-destination 127.0.0.1:443
+$ iptables -t nat -I PREROUTING -p tcp --dport 443 -i eth0 -j DNAT --to-destination [youriphere]:443
 ```
 
 ### Make it secure
@@ -171,7 +171,7 @@ To prevent man in the middle attacks, tell stunnel which certificates to accept 
 
 ```config
 # /etc/stunnel/stunnel.conf
-verify = 2
+verify = 4
 CAfile = /etc/stunnel/your_certificates.crt
 ```
 
