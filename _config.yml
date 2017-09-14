@@ -18,7 +18,7 @@ email:
 description: > # this means to ignore newlines until "baseurl:"
   Random notes
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jakobstoeck.de" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jakobstoeck
 github_username:  jakob-stoeck
 permalink: /:categories/:year/:title/
@@ -28,6 +28,7 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
