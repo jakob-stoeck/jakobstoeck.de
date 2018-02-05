@@ -2,7 +2,7 @@
 layout: post
 title:  "Fireside Chat With Joel Spolsky"
 date:   2018-01-23 21:43:00 +0200
-categories:
+excerpt: A summary of the talk in Munich.
 ---
 
 Just came back from the fireside chat with [Joel Spolsky](https://www.joelonsoftware.com/) organized by Stylight’s [Johann Romefort](http://romefort.net/) in the co-working space [Mindspace](https://www.mindspace.me/munich/viktualienmarkt/) in the vicinity of Munich’s Viktualienmarkt. For those of you who could not attend but are interested these were some of the topics:

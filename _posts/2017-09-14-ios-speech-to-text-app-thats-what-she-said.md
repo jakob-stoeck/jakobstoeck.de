@@ -1,15 +1,16 @@
 ---
 layout: post
-title:  "iOS Speech To Text App - That’s what she said"
+title:  Open Source Speech To Text App
 date:   2017-09-14 09:30:00 +0200
 categories:
 ---
 
-# That’s what she said
+Playing a bit with Java and Swift, I built two small apps for iOS and Android and solved a problem of mine: With "That’s What She Said" you receive the text of any voice message without listening to it.
 
-With That’s What She Said you can read the text of any voice message or audio file you receive.
+- [View on Apple App Store](https://itunes.apple.com/us/app/thats-what-she-said/id1239469302?ls=1&mt=8) ([GitHub](https://github.com/jakob-stoeck/speechToText))
+- [View on Google Play Store](https://play.google.com/store/apps/details?id=de.jakobstoeck.speechtotext) ([GitHub](https://github.com/jakob-stoeck/speechToText-android))
 
-[View on App Store](https://itunes.apple.com/us/app/thats-what-she-said/id1239469302?ls=1&mt=8)
+Source Code on GitHub: [https://github.com/jakobstoeck/](https://github.com/jakobstoeck/)
 
 ## How it works
 

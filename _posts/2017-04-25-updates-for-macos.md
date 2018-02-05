@@ -3,6 +3,7 @@ layout: post
 title:  "Updates for macOS"
 date:   2017-04-25 14:00:01 +0200
 categories:
+excerpt: Updates everything on your Mac with one CLI command
 ---
 
 Installing and updating system packages and applications is much easier under macOS using the CLI if you use [homebrew](https://brew.sh) and the [Mac App Store Command Line Interface](https://github.com/mas-cli/mas), then you can just:
