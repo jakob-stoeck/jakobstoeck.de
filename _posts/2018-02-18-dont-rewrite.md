@@ -1,15 +1,31 @@
 ---
 layout: post
-title:  "Don’t rewrite"
+title:  "Don’t demolish"
 date:   2018-02-18 14:00:00 +0100
-excerpt: Why you landed where you are right now, why a rewrite would not solve these problems and what you should do instead.
+excerpt: Why a software rewrite is not a good solution, what the underlying issues probably are and what you could do instead.
 ---
 
-Much is written about how you should not rewrite a whole application and I have added some further reading at the bottom of this post. Here I want to add some reasons of why you landed where you are right now and why a rewrite would not solve those:
+![](/assets/never-demolish.jpg)
+*Transformation de 530 logements, bâtiments G, H, I, quartier du Grand Parc - Lacaton & Vassal, Druot, Hutin, Image © [Philippe Ruault](mailto:philippe.ruault@numericable.fr) - For all uses, thank you to contact him*
 
-<abbr title="Too long didn’t read">TL;DR</abbr>: Teams should solve business problems, need performance indicators and architectural principles.
+Much is written about how you should not rewrite a whole application and I have added some further reading at the bottom of this post. Here I want to add some reasons of why you probably landed where you are right now and why a rewrite is just another indicator of your fundamental problems:
 
-You have a "legacy application" which needs a rewrite. Instead of throwing it away and commencing the rewrite ponder about how it could come so far and whether your current organization is really capable of writing something better.
+<abbr title="Too long didn’t read">TL;DR</abbr>: Software development teams should solve business problems instead of implementing predetermined solutions, need performance indicators and architectural principles.
+
+## An analogy in civil engineering
+
+Housing complexes built in Europe during the 1960s and 1970s are largely considered outdated and urbanistically failed. France ruled in 1990 to rebuild them. Until now, the demolition of 113,200 housing units and the relocation of its inhabitants cost 3 billion. Building 105,000 new homes cost 12 billion - a total of 15 billion for a loss of 8,200 homes.
+
+A couple of architects were offended for economic and social reasons and started to show the government how to renovate instead of demolishing and letting the residents live in their home. There is [a great exhibition](http://ruby-press.com/projects/never-demolish/) about it.
+
+In one example at [Cité du Grand Parc in Bordeaux](http://lacatonvassal.com/index.php?idp=80), three old housing complexes with 4,000 inhabitants were augmented by these architects by adding winter gardens to the front and back extending the living space by one third. Serving as a climate buffer they additionally reduced the house energy consumption by half and added a better working ventilation. The cost came down to half of what a complete rebuild was estimated and renovation was organized in a way to let the residents live inside their homes nearly the whole time.
+
+![](/assets/never-demolish-2.jpg)
+*The blue winter gardens were added to the structure for more living space and climate buffer, making a demolition and relocation unnecessary, Image © [Lacaton & Vassal - Druot](https://lacatonvassal.com/index.php?idp=80)*
+
+## Back to software engineering
+
+So you have a "legacy application" which needs a rewrite. Instead of throwing it away and commencing the rewrite ponder about how it could come so far and whether your current organization is really capable of writing something better.
 
 > If your current application is beyond repair in your eyes, the fault most probably lies not within the technology but your organization. Instead of rewriting, think about the prerequisites which are not fulfilled.
 
@@ -35,7 +51,7 @@ This is different to a lot of organizations where the business and technology le
 This is not agile even if you have agile teams. See how the team cannot iterate on the solutions anymore but just on a single predefined solution which might even not accepted until the last iteration. This is a waterfall-y process just much less efficient.
 
 ![](/assets/Making-sense-of-MVP-1.png)
-*Henrik Kniberg (2016) [Source](http://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp)*
+*Henrik Kniberg (2016) [Source](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp)*
 
 If you are doing this you should not rewrite your application. It will end up the same like the last one. Instead rewrite small parts of it. And try to change the organizational structure to get more into the best practices outlined above.
 
@@ -99,3 +115,8 @@ If you do, read on why you still should not rewrite and instead shape the organi
 - [The Art of Scalability, Michael T. Fisher, Martin L. Abbott, 2015](http://theartofscalability.com)
 - [Making sense of MVP (Minimum Viable Product) – and why I prefer Earliest Testable/Usable/Lovable, Henrik Kniberg, 2016](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp)
 - [Products Over Projects, Sriram Narayan, 2017](https://martinfowler.com/articles/products-over-projects.html)
+
+![](/assets/never-demolish-3.jpg)
+*Before and after augmenting a building using its main structure, Image © [Philippe Ruault](mailto:philippe.ruault@numericable.fr) - For all uses, thank you to contact him*
+
+(Edit 2018-03-07: Added civil engineering analogy and changed title from "rewrite" to "demolish" to make the intent clearer.)
