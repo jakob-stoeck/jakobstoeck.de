@@ -19,7 +19,7 @@ email:
 # description: > # this means to ignore newlines until "baseurl:"
 # Desc
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jakobstoeck.de" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.jakobstoeck.de" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jakobstoeck
 github_username:  jakob-stoeck
 linkedin_username: jakobstoeck
