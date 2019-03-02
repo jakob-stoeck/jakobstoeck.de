@@ -1,18 +1,5 @@
 @import "{{ site.theme }}";
 
-.marquee {
-	overflow: hidden;
-	width: 100%;
-	white-space: nowrap;
-}
-.marquee p {
-	padding-left: 100%;
-	animation: marquee 5s cubic-bezier(0, 1.16, 1, 0.39) 1;
-}
-@keyframes marquee {
-    0% {transform: translate(0, 0)}
-    100% {transform: translate(-100%, 0)}
-}
 .site-header {
   border: 0;
 }
