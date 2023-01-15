@@ -29,7 +29,7 @@ $ pipenv run python download.py
 
 ## How to query
 
-Now, you will have more than 1,000 gzipped text files with all domains. The files are tab-separated and include DNS has multiple entry types for different purposes: mail servers, name servers (what your browser uses), public keys, etc. 
+Now, you will have more than 1,000 gzipped text files with all domains. The files are tab-separated. DNS has entry types that mark different purposes: mail servers, name servers (what your browser uses), signatures, etc. 
 
 For example, the first 5 lines of the `.pizza` TLD look like this:
 
@@ -76,7 +76,7 @@ soa
 
 #### There are so many TLDs!
 
-A bit less than 2,000 TLDs, with even local variants like `.vermögensberater` (financial advisor). You can lookup the history and raison d’etre of each TLD on https://icannwiki.org/.
+A bit less than 2,000 TLDs, with even local variants like `.vermögensberater` (financial advisor). You can lookup the history and raison d'être of each TLD on <https://icannwiki.org/>.
 
 #### The first domain was `.no`
 
